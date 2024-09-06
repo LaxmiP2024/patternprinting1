@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // * * * * *
+        //   *     * 
+        //     *   *
+        //       * *
+        //         *
+        rows = 5
+        for (i = 1; i <= rows; i++) {
+            s = ""
+            for (j = 1; j <= rows; j++) {
+                if (i == 1 || i == j || j == rows) {
+                    s = s + "*" + " "
+                }
+                else {
+                    s = s + " " + " "
+                }
+            }
+            console.log(s);
+
+        }
+
+        // * * * * *
+        //  *      *
+        //   *    *
+        //    *  *
+        //      *
+
+        rows1 = 5
+        for (i = 1; i <= rows1; i++) {
+            s1 = ""
+            for (sp = 0; sp < i - 1; sp++) {
+                s1 = s1 + " "
+            }
+            for (j = 1; j <= rows1; j++) {
+                if (i == 1 || j == 1 || i + j == rows1 + 1) {
+                    s1 = s1 + "*" + " "
+                }
+                else {
+                    s1 = s1 + " " + " "
+                }
+            }
+            console.log(s1);
+
+        }
+
+        // str="abcdefghijklmnopqrstuvwxyz"///["abcd","efgh","ijkl"........"yz"]
+
+        let str = "abcdefghijklmnopqrstuvwxyz";
+        let arr = [];
+        let temp = "";
+
+        for (let i = 0; i < str.length; i++) {
+            temp += str[i];
+            if (temp.length === 4) {
+                arr[arr.length] = temp;
+                temp = "";
+            }
+        }
+
+        if (temp !== "") {
+            arr[arr.length] = temp;
+        }
+
+        console.log(arr);
+
+
+    </script>
+</body>
+
+</html>
